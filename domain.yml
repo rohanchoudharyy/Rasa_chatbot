@@ -1,0 +1,137 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- teach
+- student
+- software
+- business
+- submit
+- form
+- give_email
+- give_mobile
+- personalitydevelopment
+- design
+- marketing
+- lifestyle
+- photography
+- health
+- teachertraining
+- music
+- academy
+- language
+- academics
+entities:
+- email
+- mobile
+slots:
+  email:
+    type: unfeaturized
+  mobile:
+    type: unfeaturized
+responses:
+  utter_wrong_email:
+  - text: enter correct email.
+  utter_wrong_number:
+  - text: enter correct number.
+  utter_ask_email:
+  - text: Please enter your e-mail.
+  utter_ask_mobile:
+  - text: Please enter your contact number.
+  utter_submit:
+  - text: Thankyou for showing your interest, our team will get in touch with you.
+  utter_greet:
+  - text: Hie there! Welcome to Olcademy, how do you want to use our platform ?
+    buttons:
+    - title: As a teacher
+      payload: /teach
+    - title: As a student
+      payload: /student
+  utter_teach:
+  - text: What category are you good at?
+    buttons:
+    - title: IT/Software
+      payload: /form
+    - title: Business
+      payload: /form
+    - title: Personality Development
+      payload: /form
+    - title: Design
+      payload: /form
+    - title: Marketing
+      payload: /form
+    - title: Lifestyle
+      payload: /form
+    - title: Photography
+      payload: /form
+    - title: Health & Fitness
+      payload: /form
+    - title: Teacher & training
+      payload: /form
+    - title: Music
+      payload: /form
+    - title: Academics
+      payload: /form
+    - title: Language
+      payload: /form
+  utter_student:
+  - text: Alright cool! What would you like to learn?
+    buttons:
+    - title: IT/Software
+      payload: /form
+    - title: Business
+      payload: /form
+    - title: Personality Development
+      payload: /form
+    - title: Design
+      payload: /form
+    - title: Marketing
+      payload: /form
+    - title: Lifestyle
+      payload: /form
+    - title: Photography
+      payload: /form
+    - title: Health & Fitness
+      payload: /form
+    - title: Teacher & training
+      payload: /form
+    - title: Music
+      payload: /form
+    - title: Academics
+      payload: /form
+    - title: Language
+      payload: /form
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a conversational bot Olka, created by Olcademy.
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_teach
+- utter_student
+- utter_ask_email
+- utter_ask_mobile
+- utter_submit
+- utter_wrong_email
+- utter_wrong_number
+forms:
+- basic_info
